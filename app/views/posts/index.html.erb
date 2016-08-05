@@ -1,9 +1,7 @@
 <%= provide(:title, 'Messages') %>
 
-<div class="row">
+<div class="row align-center">
   <div class="small-12 columns">
-    <h1>Posts!</h1>
-    <%= link_to "Create new post", posts_new_path, class: "button hollow" %>
     <h3>Recent posts</h3>
     <% @posts.each do |post| %>
       <div class="row">

@@ -1,13 +1,21 @@
 <% provide(:title, "Home") %>
 
-<div class="row align-center">
-  <div class="small-6 columns">
-    <h1 class="text-center">Welcome to Mesboard!</h1>
+<div class="home-container">
+  <div class="row align-center">
+    <div class="small-6 columns">
+      <h1 class="text-center">Welcome to Mesboard!</h1>
 
-    <% if user_signed_in? %>
-      <%= link_to "Dashboard", posts_index_path, class: "button hollow"  %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "button hollow"  %>
-    <% end %>
+
+    </div>
+  </div>
+
+  <div class="row align-center">
+    <div class="small-2 columns small-centered">
+      <% if user_signed_in? %>
+        <%= link_to "Dashboard", posts_index_path, class: "button hollow"  %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "button hollow"  %>
+      <% end %>
+    </div>
   </div>
 </div>
