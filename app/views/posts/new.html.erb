@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="small-6 columns">
+    <h1>Posts#new</h1>
+    <p>Find me in app/views/posts/new.html.erb</p>
+    <%= form_for(@post, url: posts_create_path) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :message %>
+      <%= f.text_area :message %>
+
+      <%= f.label :start_time %>
+      <%= f.time_field :start_time %>
+
+      <%= f.label :end_time %>
+      <%= f.time_field :end_time %>
+
+      <%= f.submit "Post my message", class: "button hollow" %>
+
+    <% end %>
+  </div>
+</div>

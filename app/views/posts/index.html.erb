@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="small-6 columns">
+    <h1>Posts!</h1>
+    <%= link_to "Create new post", posts_new_path, class: "button hollow" %>
+    <% @posts.each do |post| %>
+      <p>
+        <%= post.message %>
+      </p>
+    <% end %>
+  </div>
+</div>

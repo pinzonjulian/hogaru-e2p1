@@ -12,9 +12,24 @@
 
   <body>
     <%= render 'layouts/menu' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <div>
+      <% flash.each do |message_type, message|  %>
+        <%= content_tag(:div, message, class: "callout #{message_type}") %>
+      <% end %>
+    </div>
+
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
     <%= yield %>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="callout">
+          <%= debug(params) if Rails.env.development? %>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>

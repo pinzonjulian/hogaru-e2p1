@@ -1,18 +1,16 @@
 Rails.application.routes.draw do
-
   root 'static_pages#home'
 
-  # get '/login'
-  # post 'login'
-  #
-  # get '/signup'
-  # post '/signup'
-  #
-  # delete 'logout'
-  #
-  # get '/dashboard'
+  get 'posts/new'
 
+  get 'posts/create'
+  post 'posts/create'
 
+  get 'posts/show'
+
+  get 'posts/index'
+
+  devise_for :users
 
 
 end
