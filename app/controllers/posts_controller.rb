@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.where("end_time >= ?", Time.now)
   end
 
   private

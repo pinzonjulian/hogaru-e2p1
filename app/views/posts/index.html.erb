@@ -7,8 +7,9 @@
     <h3>Recent posts</h3>
     <% @posts.each do |post| %>
       <div class="row">
-        <div class="small-6 columns"><%= post.created_by %></div>
-        <div class="small-6 columns"><%= post.message %></div>
+        <div class="small-4 columns"><%= post.created_by %></div>
+        <div class="small-4 columns"><%= post.message %></div>
+        <div class="small-4 columns"><%= post.end_time %></div>
       </div>
     <% end %>
   </div>
