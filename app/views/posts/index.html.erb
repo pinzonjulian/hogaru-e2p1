@@ -3,12 +3,24 @@
 <div class="row align-center">
   <div class="small-12 columns">
     <h3>Recent posts</h3>
-    <% @posts.each do |post| %>
-      <div class="row">
-        <div class="small-4 columns"><strong><%= post.created_by %></strong></div>
-        <div class="small-4 columns"><p><%= post.message %></p></div>
-        <div class="small-4 columns"><p><%= I18n.localize(post.end_time) %></p></div>
+    <% if @posts.empty? %>
+    <div class="row">
+      <div class="small-12 columns">
+        <p> There are no recent posts. Go to
+          <%= link_to "Dashboard", posts_new_path, class: "white-link" %>
+          to create one
+        </p>
       </div>
+    </div>
+    <% else %>
+      <% @posts.each do |post| %>
+        <div class="row">
+          <div class="small-4 columns"><strong><%= post.created_by %></strong></div>
+          <div class="small-4 columns"><p><%= post.message %></p></div>
+          <div class="small-4 columns"><p><%= I18n.localize(post.end_time) %></p></div>
+        </div>
+      <% end %>
     <% end %>
+
   </div>
 </div>
