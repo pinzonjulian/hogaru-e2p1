@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post[:created_by] = current_user.email
+    @post[:start_time] = DateTime.now
     if @post.save
       flash.now[:success] = "Your message has been posted!"
       redirect_to posts_index_path

@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   validate :end_time_before_now?
 
   def end_time_before_now?
-    if end_time < DateTime.now
+    if end_time < start_time
       errors.add :end_date, "must be after now"
     end
   end
