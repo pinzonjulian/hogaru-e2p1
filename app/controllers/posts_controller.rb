@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    #current_user.posts.build()
     @post = Post.new(post_params)
     @post[:created_by] = current_user.email
     @post[:start_time] = DateTime.now
@@ -23,7 +24,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.where("end_time >= ?", Time.now)
+    #traer del cookie los ids que ya vi
+    @posts = Post.where("end_time >= ?", Time.now).where.not(id: [])
   end
 
   private
