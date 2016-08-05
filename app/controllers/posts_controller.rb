@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    # @post[:created_by] = 'current_member[:email]'
   end
 
   def create
@@ -25,6 +26,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message, :start_time, :end_time)
+    params.require(:post).permit(:message, :start_time, :end_time, :created_by)
   end
 end
