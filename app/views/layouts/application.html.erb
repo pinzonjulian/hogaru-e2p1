@@ -19,9 +19,10 @@
       <% end %>
     </div>
 
-    <!-- <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
-    <%= yield %>
+    <div class="main-content-padding">
+      <%= yield %>
+    </div>
+
 
     <% if Rails.env.development? %>
       <div class="row">
