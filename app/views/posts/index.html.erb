@@ -4,10 +4,12 @@
   <div class="small-6 columns">
     <h1>Posts!</h1>
     <%= link_to "Create new post", posts_new_path, class: "button hollow" %>
+    <h3>Recent posts</h3>
     <% @posts.each do |post| %>
-      <p>
-        <%= post.message %>
-      </p>
+      <div class="row">
+        <div class="small-6 columns"><%= post.created_by %></div>
+        <div class="small-6 columns"><%= post.message %></div>
+      </div>
     <% end %>
   </div>
 </div>
