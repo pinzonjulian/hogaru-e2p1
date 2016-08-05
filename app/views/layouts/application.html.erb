@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= full_title(yield(:title)) %></title>
 
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
   </head>
 
   <body>
+    <%= render 'layouts/menu' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
