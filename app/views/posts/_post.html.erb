@@ -1,0 +1,8 @@
+<div class="row whitebox jp-center">
+  <div class="small-3 columns"><strong><%= post.created_by %></strong></div>
+  <div class="small-3 columns"><%= post.message %></div>
+  <div class="small-3 columns"><%= I18n.localize(post.end_time) %></div>
+  <div class="small-3 columns jp-center">
+    <%= link_to "Dismiss", hide_post_path(post), class:"button"  %>
+  </div>
+</div>

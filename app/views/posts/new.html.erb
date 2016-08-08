@@ -4,7 +4,7 @@
   <div class="small-6 columns">
     <h1>Create post!</h1>
     <p>All times are UTC. The time now is <strong><%= Time.zone.now %></strong></p>
-    <%= form_for(@post, url: posts_create_path) do |f| %>
+    <%= form_for(@post, url: posts_path) do |f| %>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :message %>

@@ -1,3 +1,27 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.whitebox {
+  border: 1px solid white;
+  margin-bottom: 8px;
+  padding: 8px 0px;
+}
+
+.jp-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background-color: white;
+  color: #1C5969;
+  margin-bottom: 0px;
+  transition: all 100ms ease-in-out
+}
+
+.button:hover {
+  box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.35);
+  background-color: white;
+  color: #1C5969;
+}

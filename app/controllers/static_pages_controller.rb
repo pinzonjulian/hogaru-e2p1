@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
 
   def home
     if current_user
-      redirect_to posts_index_path
+      redirect_to posts_path
     end
   end
 end

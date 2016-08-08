@@ -3,8 +3,8 @@
     <ul class="menu">
       <li class="menu-text"><%= link_to "Mesboard", root_path %></li>
       <% if user_signed_in? %>
-        <li><%= link_to "Dashboard", posts_index_path  %></li>
-        <li><%= link_to "Create new post", posts_new_path  %></li>
+        <li><%= link_to "Dashboard", posts_path  %></li>
+        <li><%= link_to "Create new post", new_post_path  %></li>
       <% end %>
     </ul>
   </div>
